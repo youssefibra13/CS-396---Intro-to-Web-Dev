@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="../assets/CSS/style.css">
+    <script src="../assets/jsscript/jsscript.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact Us</a>
+      </div>
+      <div class="nav-right">
+        <button class="nav-button" aria-label="Cart">🛒</button>
+        <button class="nav-button" aria-label="Notifications">🔔</button>
+        <button class="nav-button" onclick="location.href='userprofile.html'" aria-label="User Profile">👤</button>
+      </div>
+    </nav>
+    <div class="theme-switcher">
+      <button onclick="switchTheme('light')">Light Mode</button>
+      <button onclick="switchTheme('dark')">Dark Mode</button>
+    </div> 
+    <main>
+      <!-- Intro to the website homepage -->
+      <p>Welcome to Circular<br>Your Path to E-commerce Success</p>
+      <div class="why-choose-circular">
+        <p>Why Choose Circular?</p>
+        <div class="icons">
+          <div class="icon">
+            <span>📞</span>
+            <p>Customer Service</p>
+          </div>
+          <div class="icon">
+            <span>⚙️</span>
+            <p>Simplicity</p>
+          </div>
+          <div class="icon">
+            <span>🛍️</span>
+            <p>Great Products</p>
+          </div>
+        </div>
+      </div>
+      <div class="near-end">
+      <p>500+ Products <br> Choose From Countless Clothes</p>
+      </div>
+      <div class="start-now-container">
+        <button class="start-now-button" onclick="location.href='products.html'">Start Now</button>
+      </div>
+    </main>
+  </body>
+</html>

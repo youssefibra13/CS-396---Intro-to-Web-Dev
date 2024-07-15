@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="../assets/CSS/style2.css">
+    <script src=".../assets/jsscript/jsscript.js" defer></script>
+
+
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contactus.html">Contact Us</a>
+      </div>
+      <div class="nav-right">
+        <button class="nav-button">🛒</button>
+        <button class="nav-button">🔔</button>
+        <button class="nav-button" onclick="location.href='userprofile.html'">👤</button>
+      </div>
+    </nav>
+    <div class="theme-switcher">
+      <button onclick="switchTheme('light')">Light Mode</button>
+      <button onclick="switchTheme('dark')">Dark Mode</button>
+    </div>
+      <main class="create-product-form">
+    <h2>Create Product Post</h2>
+    <form action="submit.php" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="title">Product Title:</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="category">Product Category:</label>
+        <select id="category" name="category" required>
+          <option value="">Select Category</option>
+          <option value="Dress">Dress</option>
+          <option value="clothing">Clothing</option>
+          <option value="Pants">Pants</option>
+          <option value="skirts">Skirts</option>
+          
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location">
+      </div>
+      <div class="form-group">
+        <label for="tags">Tags:</label>
+        <input type="text" id="tags" name="tags">
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="pictures">Upload Pictures:</label>
+        <input type="file" id="pictures" name="pictures[]" accept="image/*" multiple>
+        <small>Max 5 images. Allowed types: JPG, JPEG, PNG.</small>
+      </div>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </main>  
+  </body>
+</html>
