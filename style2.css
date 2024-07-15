@@ -1,0 +1,374 @@
+/* Theme switcher styles */
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --accent-color: #009dff;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212; /* Dark background */
+  --text-color: #e0e0e0; /* Light text */
+  --accent-color: #bb86fc; /* Soft purple accent */
+}
+
+html {
+    font-size: 100%; /* 16px by default */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  text-align: center;
+}
+/* Image effects */
+.grid-item {
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+  transform: scale(1.2);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 280px;
+  display: block;
+}
+
+.grid-item:hover .caption {
+  opacity: 1;
+  visibility: visible;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 1em;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Focus styles */
+a:focus, 
+button:focus, 
+input:focus {
+    outline: 3px solid #0055ff; /* Customizable focus outline */
+    outline-offset: 2px; /* Space between element and outline */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .nav-left {
+        flex-direction: column;
+    }
+
+    .nav-left a {
+        margin: 0.5em 0;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-left a {
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+
+.input_box {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-left: 25px; /* Add margin-left to move it 10px to the right */
+
+}
+
+
+.filter-container {
+  width: 10%;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust columns as needed */
+  gap: 20px; /* Adjust gap between grid items */
+  margin-top: 20px;
+  padding: 20px;
+  margin-left: 25px; /* Add margin-left to move it 10px to the right */
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 280px;
+  display: block;
+}
+
+
+.start-now-container {
+  margin-top: 40px; /* Adjust the gap between the icons section and the start now button */
+  width: 100%; /* Set the width to 100% to take full width of the page */
+  display: flex;
+  justify-content: center; /* Center align the content horizontally */
+}
+
+.start-now-button {
+  padding: 15px 30px;
+  font-size: 0.4em;
+  background-color: #009dff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.start-now-button:hover {
+  background-color: #0056b3;
+}
+
+
+.contact-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+
+.create-product-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.create-product-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea,
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.about-us {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.upper-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.upper-section .text {
+  width: 45%;
+}
+
+.upper-section .image {
+  width: 45%;
+}
+
+.upper-section img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.lower-section {
+  text-align: center;
+}
+
+.lower-section h2 {
+  margin-bottom: 20px;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 5px;
+}
+
+.team-member p {
+  margin-top: 10px;
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-left, .nav-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-left a, .nav-right button {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .input_box {
+    flex-direction: column;
+  }
+
+  .input_box input, .Create-new-product-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
