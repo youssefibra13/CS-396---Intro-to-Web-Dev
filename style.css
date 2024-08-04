@@ -1,8 +1,3 @@
-/* Universal box-sizing */
-* {
-  box-sizing: border-box;
-}
-
 /* Theme switcher styles */
 :root {
   --bg-color: white;
@@ -19,6 +14,7 @@
 html {
     font-size: 100%; /* 16px by default */
 }
+
 
 /* Focus styles */
 a:focus, 
@@ -47,12 +43,8 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0;
-  padding: 0;
   text-align: center;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  max-width: 100vw; /* Prevent the body from exceeding the viewport width */
 }
-
 /* Image effects */
 .grid-item {
   transition: transform 0.3s ease-in-out;
@@ -87,6 +79,8 @@ body {
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
+
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -95,15 +89,29 @@ nav {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.nav-left,
-.nav-right {
+.nav-left {
+  flex-grow: 1;
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap if they don't fit in one line */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.nav-left a,
-.nav-right .nav-button {
-  margin: 0 5px; /* Reduce margin to prevent overflow */
+.nav-left a {
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
 main {
@@ -155,6 +163,8 @@ main {
   background-color: #0056b3;
 }
 
+
+
 .dashboard {
   display: flex;
   justify-content: space-between;
@@ -197,6 +207,7 @@ main {
 
 .second-button {
     margin: 10px 15px;
+
 }
 
 .edit-profile-button,
